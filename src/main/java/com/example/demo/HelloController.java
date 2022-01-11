@@ -12,6 +12,7 @@ public class HelloController {
 		final String uri = "http://nginx-clusterip-service/";
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(uri, String.class);
+		result = result + "This is from Spring Boot service";
 		return result;
 	}
 
