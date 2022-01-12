@@ -11,7 +11,7 @@ public class HelloController {
 	@Value("${ENV_VAR}")
 	private String envVariable;
 
-	@GetMapping
+	@GetMapping(path = {"/", "/hello"})
 	public String hello() {
 		final String uri = "http://nginx-clusterip-service/";
 		RestTemplate restTemplate = new RestTemplate();
